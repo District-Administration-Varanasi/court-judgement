@@ -4,7 +4,7 @@
 Minutes of Meeting on the discussion over tickets and work flow.
 
 ## Building Qs (Ticket no. 2):
-![Ticket 2](FlowCharts/2)
+![Ticket 2](./FlowCharts/2.png)
 
 - Providing Document’s sections and semantics as “Context” in our few shot prompt
 - Giving examples of few questions for a section in the few shot prompts such as:
@@ -18,7 +18,7 @@ Example 2: "{Another Document section}"
 -   We can also set no. of questions, the tone of questions, length and other requirements. 
 
 ## Building the interface + copilot response cycle (Ticket no. 4):
-![Ticket 4](FlowCharts/4)
+![Ticket 4](./FlowCharts/4.png)
 
 -   Rounds of question and answer session with client will occur.
     
@@ -26,7 +26,7 @@ Example 2: "{Another Document section}"
 - After recieving all the info then the document drafting process will begin.
 
 ## Drafting the document (Ticket no. 5):
-![Ticket 5](FlowCharts/5)
+![Ticket 5](./FlowCharts/5.png)
 
 -   Here we will merge the pertinent document sections.
     
