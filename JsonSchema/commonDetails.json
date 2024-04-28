@@ -1,0 +1,183 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "courtDetails": {
+      "type": "object",
+      "properties": {
+        "courtName": { "type": "string" },
+        "courtLocation": { "type": "string" },
+        "courtOfficer": { "type": "string" }
+      }
+    },
+    "caseDetails": {
+      "type": "object",
+      "properties": {
+        "caseNumber": { "type": "string" },
+        "year": { "type": "integer" },
+        "sectionUnder": { "type": "string" }
+      }
+    },
+    "landDetails": {
+      "type": "object",
+      "properties": {
+        "moja": { "type": "string" },
+        "pargana": { "type": "string" },
+        "tehsil": { "type": "string" },
+        "district": { "type": "string" },
+        "landAreaHe": { "type": "number" },
+        "landAreaSqFt": { "type": "number" },
+        "landAreaSqMt": { "type": "number" },
+        "khasraNumber": { "type": "string" }
+      }
+    },
+    "partyDetails": {
+      "type": "object",
+      "properties": {
+        "seller": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "address": { "type": "string" },
+            "isScheduledCaste": { "type": "boolean" }
+          }
+        },
+        "buyer": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "address": { "type": "string" },
+            "isScheduledCaste": { "type": "boolean" },
+            "landOwnershipPostTransaction": { "type": "number" }
+          }
+        }
+      }
+    },
+    "transactionDetails": {
+      "type": "object",
+      "properties": {
+        "documentNumber": { "type": "string" },
+        "documentDate": { "type": "string" },
+        "reportBasis": { "type": "string" },
+        "registrationNumber": { "type": "string" },
+        "declarationIssued": { "type": "boolean" },
+        "objectionStatus": { "type": "boolean" },
+        "legalProceedingStatus": { "type": "boolean" }
+      }
+    },
+    "orderDetails": {
+      "type": "object",
+      "properties": {
+        "orderDate": { "type": "string" },
+        "orderStatus": { "type": "string" },
+        "effectiveDate": { "type": "string" },
+        "complaintDate": { "type": "string" }
+      }
+    },
+    "legalConditions": {
+      "type": "object",
+      "properties": {
+        "landUnderSpecificAct": { "type": "boolean" },
+        "landTransferReportMention": { "type": "boolean" }
+      }
+    },
+    "annulmentDetails": {
+      "type": "object",
+      "properties": {
+        "hasAnnulment": { "type": "boolean" },
+        "annulmentOrderDate": { "type": "string" },
+        "annulmentEffectiveDate": { "type": "string" }
+      }
+    },
+    "reinstatementDetails": {
+      "type": "object",
+      "properties": {
+        "hasReinstatement": { "type": "boolean" },
+        "reinstatementOrderDate": { "type": "string" },
+        "reinstatementEffectiveDate": { "type": "string" }
+      }
+    },
+    "transactionCancellation": {
+      "type": "object",
+      "properties": {
+        "isCancelled": { "type": "boolean" },
+        "cancelledDate": { "type": "string" },
+        "reasonForCancellation": { "type": "boolean" }
+      }
+    },
+    "evidenceDetails": {
+      "type": "object",
+      "properties": {
+        "hasOriginalDocument": { "type": "boolean" },
+        "cadastralSurveyNumber": { "type": "string" },
+        "affidavitAsPer": { "type": "boolean" }
+      }
+    },
+    "legalReferences": {
+      "type": "object",
+      "properties": {
+        "specificLawsCited": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "detailedOutcome": {
+      "type": "object",
+      "properties": {
+        "ownershipTransfers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": { "type": "string" },
+              "to": { "type": "string" },
+              "share": { "type": "number" },
+              "landDescription": { "type": "string" }
+            }
+          }
+        },
+        "orderCancellationDetails": {
+          "type": "object",
+          "properties": {
+            "cancelledOrders": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "orderNumber": { "type": "string" },
+                  "cancelDate": { "type": "string" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "documentReferences": {
+      "type": "object",
+      "properties": {
+        "saleDeed": { "type": "string" },
+        "affidavit": { "type": "string" },
+        "additionalDocuments": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "landSurveyDetails": {
+      "type": "object",
+      "properties": {
+        "surveyNumber": { "type": "string" },
+        "plotNumber": { "type": "string" }
+      }
+    },
+    "registrationDetails": {
+      "type": "object",
+      "properties": {
+        "registrationOffice": { "type": "string" },
+        "fileNumber": { "type": "string" }
+      }
+    }
+  }
+}
