@@ -13,7 +13,7 @@ def load_json(file_path):
         return json.load(file)
 
 def generate_response(user_input):
-    # Craft the request to OpenAI API including chat history
+    
     prompt = " ".join(chat_history) + user_input
     json_schema = load_json('details.schema.json')
     json_schema_str = json.dumps(json_schema)
@@ -22,7 +22,7 @@ def generate_response(user_input):
     completion = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": f'You are given a json schema to be filled. The JSON schema is {json_schema_str}. You have to ask me questions in similar JSON style like {question_str} such that i will give you sufficient information for all key-value pairs of json schema to be filled. If some i miss to answer some questions then reframe those questions and ask only those questions next time and return the filled JSON data.'},
+            {"role": "system", "content": f'You are given a json schema to be filled. The JSON schema is {json_schema_str}. You have to ask me questions in similar JSON style like {question_str} such that i will give you sufficient information for all key-value pairs of json schema to be filled. If i answer something invalid or irrelevant or impertinent then reframe those questions and ask only those questions next time.'},
             {"role": "user", "content": prompt}
         ]
     )
