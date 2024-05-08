@@ -5,5 +5,4 @@
  `OPENAI_API_KEY={YOUR_KEY}`
  
  3. Install all the requirements using requirements.txt file
- 4. Paste the commonDetails.json file in the same directory.
- 5. Now run the app.py file.
+ 4. Now run the app.py file.
