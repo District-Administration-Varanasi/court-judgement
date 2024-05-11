@@ -1,0 +1,107 @@
+{
+    "courtDetails": {
+      "courtName": "न्यायालय तहसीलदार-सदर",
+      "courtLocation": "वाराणसी",
+      "courtOfficer": "सतीश वर्मा"
+    },
+    "caseDetails": {
+      "caseNumber": "ज्202414700102510",
+      "year": 2024,
+      "sectionUnder": "34/35 उ0 प्र0 राजस्व संहिता"
+    },
+    "landDetails": {
+      "moja": "बजरडीहा",
+      "pargana": "देहात अमानत",
+      "tehsil": "सदर",
+      "district": "वाराणसी",
+      "landAreaHe": 0.3040,
+      "landAreaSqFt": 2720,
+      "landAreaSqMt": 253,
+      "khasraNumber": "मि.53"
+    },
+    "partyDetails": {
+      "seller": {
+        "name": "श्री विजय प्रताप सिंह",
+        "address": "फ्लैट नं0-जी-1 शुभ श्रीजन रेसीडेन्सी लेन नं0 6 निरालानगर शिवपुरवां वाराणसी",
+        "isScheduledCaste": false
+      },
+      "buyer": {
+        "name": "श्री रशीद जमाल",
+        "address": "मकान नं0 एन0 12/366 आजाद नगर देवपोखरी बजरडीहा शहर वाराणसी",
+        "isScheduledCaste": false,
+        "exceeds12_5Acres": false
+      }
+    },
+    "transactionDetails": {
+      "documentNumber": "5717",
+      "documentDate": "10/08/2023",
+      "reportBasis": "लेखपाल के हस्तांतरण रिपोर्ट",
+      "registrationNumber": "ज्202414700102510",
+      "declarationIssued": true,
+      "objectionStatus": false,
+      "legalProceedingStatus": true
+    },
+    "orderDetails": {
+      "orderDate": "18-03-2024",
+      "orderStatus": "निरस्त",
+      "effectiveDate": "18-03-2024",
+      "complaintDate": "03-04-2024"
+    },
+    "legalConditions": {
+      "landUnderSpecificAct": false,
+      "landTransferReportMention": true
+    },
+    "annulmentDetails": {
+      "hasAnnulment": true,
+      "annulmentOrderDate": "18-03-2024",
+      "annulmentEffectiveDate": "18-03-2024"
+    },
+    "transactionCancellation": {
+      "isCancelled": true,
+      "cancelledDate": "18-03-2024",
+      "reasonForCancellation": true
+    },
+    "evidenceDetails": {
+      "hasOriginalDocument": true,
+      "cadastralSurveyNumber": "मि.53",
+      "affidavitAsPer": true
+    },
+    "legalReferences": {
+      "specificLawsCited": [
+        "धारा-34/35 उ0 प्र0 राजस्व संहिता",
+        "धारा-77"
+      ]
+    },
+    "detailedOutcome": {
+      "ownershipTransfers": [
+        {
+          "from": "श्री विजय प्रताप सिंह",
+          "to": "श्री रशीद जमाल",
+          "share": 100,
+          "landDescription": "मौजा-बजरडीहा परगना-देहात अमानत, तहसील व जिला-वाराणसी"
+        }
+      ],
+      "orderCancellationDetails": {
+        "cancelledOrders": [
+          {
+            "orderNumber": "ज्202414700102510",
+            "cancelDate": "18-03-2024"
+          }
+        ]
+      }
+    },
+    "documentReferences": {
+      "saleDeed": "5717",
+      "affidavit": "शपथ पत्र",
+      "additionalDocuments": []
+    },
+    "landSurveyDetails": {
+      "surveyNumber": "मि.53",
+      "plotNumber": "मि.53"
+    },
+    "registrationDetails": {
+      "registrationOffice": "निबंधन कार्यालय वाराणसी",
+      "fileNumber": "ज्202414700102510"
+    }
+  }
+  
