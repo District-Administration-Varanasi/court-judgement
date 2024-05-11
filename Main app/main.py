@@ -38,7 +38,6 @@ def generate_questions():
 q_generated_str = generate_questions()
 print(q_generated_str)
 
-filled_json_str=""
 
 chat_history = []
 def generate_response(user_input):
@@ -61,7 +60,7 @@ def generate_response(user_input):
     reply = completion.choices[0].message.content
 
     if reply == "Done":
-        prompt2 = "Just give the filled JSON schema"
+        prompt2 = "Just give the filled JSON data"
         prompt2 = " ".join(chat_history) + prompt2
         completion2 = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -75,18 +74,25 @@ def generate_response(user_input):
         )
 
         filled_json_str = completion2.choices[0].message.content
+
+    else:
+        filled_json_str = "All the questions not answered!"
         
 
     chat_history.append(reply)
-    return reply
+    return reply, filled_json_str
 
+filled_json_str=""
 response=""
+
 while response!="Done":
     user_input = input("You: ")
-    response = generate_response(user_input)
+    response, filled_json_str = generate_response(user_input)
     print("Chatbot:", response)
 
+filled_json = json.loads(filled_json_str.strip())
+
 with open("usercommon.json", "w") as json_file:
-    json.dump({filled_json_str.strip()}, json_file)
+    json.dump(filled_json, json_file)
 
 subprocess.run(['python','create.py'])
