@@ -48,7 +48,6 @@
             "name": { "type": "string" },
             "address": { "type": "string" },
             "isScheduledCaste": { "type": "boolean" },
-            "landOwnershipPostTransaction": { "type": "number" },
             "exceeds12_5Acres": {
               "type": "boolean",
               "description": "Indicates if the total land ownership post-transaction exceeds 12.5 acres"
