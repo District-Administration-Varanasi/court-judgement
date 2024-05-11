@@ -80,7 +80,7 @@ def generate_response(user_input):
     chat_history.append(reply)
     return reply
 
-
+response=""
 while response!="Done":
     user_input = input("You: ")
     response = generate_response(user_input)
