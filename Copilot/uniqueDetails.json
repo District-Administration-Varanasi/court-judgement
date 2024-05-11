@@ -1,0 +1,52 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "donationDeedDetails": {
+        "type": "object",
+        "properties": {
+          "documentNumber": {
+            "type": "string"
+          },
+          "documentDate": {
+            "type": "string"
+          },
+          "registeredOffice": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "prayerPetitionDetails": {
+        "type": "object",
+        "properties": {
+          "petitionDate": {
+            "type": "string"
+          },
+          "petitionAccepted": {
+            "type": "boolean"
+          },
+          "details": {
+            "type": "string"
+          }
+        }
+      },
+      "reinstatementDetails": {
+        "type": "object",
+        "properties": {
+          "originalOrderNumber": {
+            "type": "string"
+          },
+          "absenceOfObjections": {
+            "type": "boolean"
+          },
+          "reinstatementReason": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+  

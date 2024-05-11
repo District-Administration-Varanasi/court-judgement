@@ -1,0 +1,19 @@
+{
+    "donationDeedDetails": {
+      "documentNumber": "",
+      "documentDate": "",
+      "registeredOffice": "",
+      "description": ""
+    },
+    "prayerPetitionDetails": {
+      "petitionDate": "",
+      "petitionAccepted": false,
+      "details": ""
+    },
+    "reinstatementDetails": {
+      "originalOrderNumber": "",
+      "absenceOfObjections": false,
+      "reinstatementReason": ""
+    }
+  }
+  

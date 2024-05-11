@@ -89,14 +89,6 @@
         "annulmentEffectiveDate": { "type": "string" }
       }
     },
-    "reinstatementDetails": {
-      "type": "object",
-      "properties": {
-        "hasReinstatement": { "type": "boolean" },
-        "reinstatementOrderDate": { "type": "string" },
-        "reinstatementEffectiveDate": { "type": "string" }
-      }
-    },
     "transactionCancellation": {
       "type": "object",
       "properties": {
