@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "courtDetails": {
+        "type": "object",
+        "properties": {
+          "courtName": { "type": "string" },
+          "courtLocation": { "type": "string" },
+          "courtOfficer": { "type": "string" }
+        }
+      },
+      "caseDetails": {
+        "type": "object",
+        "properties": {
+          "caseNumber": { "type": "string" },
+          "year": { "type": "integer" },
+          "sectionUnder": { "type": "string" }
+        }
+      }
+    }
+}    

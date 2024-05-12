@@ -1,0 +1,99 @@
+{
+    "courtDetails": {
+      "courtName": "Court Tehsildar-Sadar",
+      "courtLocation": "Varanasi",
+      "courtOfficer": "Satish Vamash"
+    },
+    "caseDetails": {
+      "caseNumber": "J202414700104931",
+      "year": 2024,
+      "sectionUnder": "Section 34/35 of Uttar Pradesh Revenue Code"
+    },
+    "landDetails": {
+      "moja": "Bharwanpur",
+      "pargana": "Dehat Amanat",
+      "tehsil": "Sadar",
+      "district": "Varanasi",
+      "landAreaHe": 0.302,
+      "landAreaSqFt": 690,
+      "landAreaSqMt": 64.12,
+      "khasraNumber": "529 mm"
+    },
+    "partyDetails": {
+      "seller": {
+        "name": "Mrs. Sita Devi",
+        "address": "Village Ishul Tehsil Chakiya District Chandauli",
+        "isScheduledCaste": false
+      },
+      "buyer": {
+        "name": "Mrs. Madhuri Devi",
+        "address": "Village Ishul Post Pachwaniya Tehsil Chakia District Chandauli",
+        "isScheduledCaste": false,
+        "landOwnershipPostTransaction": 12.5
+      }
+    },
+    "transactionDetails": {
+      "documentNumber": "1133",
+      "documentDate": "16/02/2024",
+      "reportBasis": "Transfer report of the accountant",
+      "registrationNumber": "Received from the registration office, Varanasi",
+      "declarationIssued": true,
+      "objectionStatus": false,
+      "legalProceedingStatus": true
+    },
+    "orderDetails": {
+      "orderDate": "Date of order issuance",
+      "orderStatus": "Status of the order",
+      "effectiveDate": "Effective date of the order",
+      "complaintDate": "Date of complaint"
+    },
+    "legalConditions": {
+      "landUnderSpecificAct": false,
+      "landTransferReportMention": true
+    },
+    "annulmentDetails": {
+      "hasAnnulment": false,
+      "annulmentOrderDate": null,
+      "annulmentEffectiveDate": null
+    },
+    "transactionCancellation": {
+      "isCancelled": false,
+      "cancelledDate": null,
+      "reasonForCancellation": null
+    },
+    "evidenceDetails": {
+      "hasOriginalDocument": true,
+      "cadastralSurveyNumber": null,
+      "affidavitAsPer": true
+    },
+    "legalReferences": {
+      "specificLawsCited": []
+    },
+    "detailedOutcome": {
+      "ownershipTransfers": [
+        {
+          "from": "Mrs. Sita Devi",
+          "to": "Mrs. Madhuri Devi",
+          "share": 100,
+          "landDescription": "Mauza-Bharwanpur Parna-Dehat Amanat, Tehsil and District-Varanasi"
+        }
+      ],
+      "orderCancellationDetails": {
+        "cancelledOrders": []
+      }
+    },
+    "documentReferences": {
+      "saleDeed": "Attached file",
+      "affidavit": "Attached file",
+      "additionalDocuments": []
+    },
+    "landSurveyDetails": {
+      "surveyNumber": null,
+      "plotNumber": null
+    },
+    "registrationDetails": {
+      "registrationOffice": "Amaldramaad Patravali Dakhkhal office",
+      "fileNumber": "00907 Crop year 1427-1432 F's Arazi number - 529 mm"
+    }
+}
+  
