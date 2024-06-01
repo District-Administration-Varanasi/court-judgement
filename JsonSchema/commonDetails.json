@@ -48,7 +48,10 @@
             "name": { "type": "string" },
             "address": { "type": "string" },
             "isScheduledCaste": { "type": "boolean" },
-            "landOwnershipPostTransaction": { "type": "number" }
+            "exceeds12_5Acres": {
+              "type": "boolean",
+              "description": "Indicates if the total land ownership post-transaction exceeds 12.5 acres"
+            }
           }
         }
       }
@@ -170,6 +173,88 @@
         "registrationOffice": { "type": "string" },
         "fileNumber": { "type": "string" }
       }
+    },
+    "examples": {
+      "courtDetailsExamples": [
+        {
+          "courtName": "न्यायालय तहसीलदार-सदर, वाराणसी",
+          "courtLocation": "वाराणसी",
+          "courtOfficer": "सतीश वर्मा"
+        },
+        {
+          "courtName": "District Court, Bengaluru",
+          "courtLocation": "Bengaluru",
+          "courtOfficer": "Anita Desai"
+        },
+        {
+          "courtName": "High Court of Madras",
+          "courtLocation": "Chennai",
+          "courtOfficer": "K. Muralidharan"
+        }
+      ],
+      "caseDetailsExamples": [
+        {
+          "caseNumber": "ज्202414700104931",
+          "year": 2024,
+          "sectionUnder": "धारा-34/35 उ0 प्र0 राजस्व संहिता"
+        },
+        {
+          "caseNumber": "BC/104/2024",
+          "year": 2024,
+          "sectionUnder": "Section 24 Civil Procedure Code"
+        }
+      ],
+      "landDetailsExamples": [
+        {
+          "moja": "भगवानपुर",
+          "pargana": "देहात अमानत",
+          "tehsil": "सदर",
+          "district": "वाराणसी",
+          "landAreaHe": 0.3020,
+          "landAreaSqFt": 690,
+          "landAreaSqMt": 64.12,
+          "khasraNumber": "529मि"
+        },
+        {
+          "moja": "Koramangala",
+          "pargana": "Urban Bengaluru",
+          "tehsil": "Bengaluru South",
+          "district": "Bengaluru Urban",
+          "landAreaHe": 0.5,
+          "landAreaSqFt": 5000,
+          "landAreaSqMt": 464.5,
+          "khasraNumber": "K-204/1"
+        }
+      ],
+      "partyDetailsExamples": [
+        {
+          "seller": {
+            "name": "श्रीमती माधुरी देवी",
+            "address": "पटेल नगर कालोनी भगवानपुर तहसील व जिला वाराणसी",
+            "isScheduledCaste": false
+          },
+          "buyer": {
+            "name": "श्रीमती सीता देवी",
+            "address": "भगवानपुर तहसील व जिला वाराणसी",
+            "isScheduledCaste": false,
+            "landOwnershipPostTransaction": 1
+          }
+        },
+        {
+          "seller": {
+            "name": "Raman Reddy",
+            "address": "Tehsil-Atrauli, Aligarh",
+            "isScheduledCaste": false
+          },
+          "buyer": {
+            "name": "Mohsin Ali",
+            "address": "Koramangala, Bengaluru",
+            "isScheduledCaste": false,
+            "landOwnershipPostTransaction": 0.5
+          }
+        }
+      ]
     }
   }
-}
+  }
+

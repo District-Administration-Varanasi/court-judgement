@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "courtDetails": {
+        "type": "object",
+        "properties": {
+          "courtName": { "type": "string", "const": "न्यायालय तहसीलदार-सदर" },
+          "courtLocation": { "type": "string", "const": "वाराणसी" },
+          "courtOfficer": { "type": "string", "const": "सतीश वर्मा" }
+        }
+      },
+      "caseDetails": {
+        "type": "object",
+        "properties": {
+          "year": { "type": "integer", "const":2024 },
+          "sectionUnder": { "type": "string", "const": "धारा-34/35 उ0 प्र0 राजस्व संहिता" }
+        }
+      },
+      "landDetails": {
+        "type": "object",
+        "properties": {
+          "pargana": { "type": "string", "const": "देहात अमानत" },
+          "tehsil": { "type": "string", "const": "सदर" },
+          "district": { "type": "string", "const": "वाराणसी" }
+        }
+      },
+      "transactionDetails": {
+        "type": "object",
+        "properties": {
+          "reportBasis": { "type": "string", "const": "लेखपाल के हस्तांतरण रिपोर्ट" }
+        }
+      }
+    }
+  }
+  
