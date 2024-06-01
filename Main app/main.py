@@ -21,7 +21,7 @@ def generate_questions():
         model="gpt-3.5-turbo",
         messages=[
             #Prompt 1
-            {"role": "system", "content": '''You are an AI assistant who frames questions in JSON data format for a set JSON schema and uses an example for reference. You only return JSON data containing questions and nothing else. Example:
+            {"role": "system", "content": '''You are an AI assistant who frames questions in JSON style for 'all the keys' of given set JSON schema and who uses an example for reference. You only return JSON data containing questions and nothing else. Example:
             JSON Schema: ''' + small_example_str +
             '''Questions JSON data:''' + question_str
             },
@@ -58,7 +58,7 @@ def reframe_Q(Q_dict_earlier, expected_dict_ans):
         model="gpt-3.5-turbo",
         messages=[
             #Prompt 3
-            {"role": "system", "content": '''You are an AI assistant that creates new questions in JSON format which should be different than "Earlier questions". Questions should be asked for some  "Expected answers" so frame the new questions accordingly. Make sure not to recreate the "Earlier questions."'''
+            {"role": "system", "content": '''You are an AI assistant that creates new questions in JSON format which should be different than "Earlier questions". Questions should be asked for some  "Expected answers" so frame the new questions accordingly. Make sure not to recreate the "Earlier questions".'''
             },
             {"role": "user", "content":
             '''Earlier questions:''' + Q_dict_earlier +
@@ -68,19 +68,64 @@ def reframe_Q(Q_dict_earlier, expected_dict_ans):
     )
     return completion.choices[0].message.content
 
+def convert_ans(ans_str):
+    translated = load_json('engTranslateExample.json')  
+    translated_str = json.dumps(translated) 
+    original = load_json('hinTranslateExample.json')  
+    original_str = json.dumps(original) 
+    completion = client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            #Prompt hindi to eng ans.
+            {"role": "system", "content": '''You are an AI assistant that translates the values of JSON properties into English. 'Original values' JSON will be given and you have to create 'Translated values' JSON. Example:
+             Original values: ''' + original_str +
+             '''Translated values:''' + translated_str
+            },
+            {"role": "user", "content":
+            '''Original values: ''' + ans_str +
+            '''Translated values: '''
+            }
+        ]
+    )
+    return completion.choices[0].message.content
+
+def convert_q(q_str):
+    translatedQ = load_json('hinQExample.json') 
+    translatedQ_str = json.dumps(translatedQ) 
+    originalQ = load_json('questionsExample.json') 
+    originalQ_str = json.dumps(originalQ) 
+    completion = client.chat.completions.create(
+        model="gpt-3.5-turbo",
+        messages=[
+            #Prompt eng to hindi Q.
+            {"role": "system", "content": '''You are an AI assistant that translates the JSON values of question properties into Hindi. 'Original questions' JSON will be given and you have to create 'Translated questions' JSON. Example:
+             Original questions: ''' + originalQ_str +
+             '''Translated questions:''' + translatedQ_str
+            },
+            {"role": "user", "content":
+            '''Original questions: ''' + q_str +
+            '''Translated questions: '''
+            }
+        ]
+    )
+    return completion.choices[0].message.content
+
+
 ################################################# BEGINS ###################################################
 
 q_1_str = generate_questions()
-print(q_1_str)
+hin_q_str = convert_q(q_1_str)
+print(hin_q_str)
 q_dict = json.loads(q_1_str)
-print("\n Your answers in JSON format: \n")
-user_ans_str = input("")
+print("\n आपके उत्तर JSON प्रारूप में: \n")
+user_ans_str_hin = input("")
 
 json_schema_dict = load_json('commonDetails.json') #common details JSON schema dictionary
 json_example_dict = load_json('exampleSchema-2.json') #Example of filled JSON data with expected values
 
 while True:
-     
+
+    user_ans_str = convert_ans(user_ans_str_hin)
     filled_json_dict_str = fill_JSON_schema(user_ans_str)
     filled_dict = json.loads(filled_json_dict_str)
     print("filling done")
@@ -102,12 +147,13 @@ while True:
         Q_earlier_str = json.dumps(Q_unans_dict_earlier)    
         expected_ans_str = json.dumps(expected_dict_ans)    
         Q_dict_2_str = reframe_Q(Q_earlier_str, expected_ans_str)
-        Q_dict_2 = json.loads(Q_dict_2_str)
-        print(Q_dict_2_str)
+        q_dict = json.loads(Q_dict_2_str) #to reuse
+        hin_Q_dict_2_str = convert_q(Q_dict_2_str)
+        print(hin_Q_dict_2_str)
 
         #User gives new answers
-        print("\n Your answers in JSON format: \n")
-        user_ans_str=input("")
+        print("\n आपके उत्तर JSON प्रारूप में: \n")
+        user_ans_str_hin=input("")
     
     else:
          break
