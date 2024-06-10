@@ -1,0 +1,92 @@
+{
+    "courtDetails": {
+      "courtName": "Court Tehsildar-Sadar",
+      "courtLocation": "Varanasi",
+      "courtOfficer": "Satish Vamash"
+    },
+    "caseDetails": {
+      "caseNumber": "J202414700104274",
+      "year": 2024,
+      "sectionUnder": "34/35 of Uttar Pradesh Revenue Code"
+    },
+    "landDetails": {
+      "moja": "Maduvadih Parna-Dehat Amanat",
+      "pargana": "Maduvadih Parna-Dehat Amanat",
+      "tehsil": "Sadar",
+      "district": "Varanasi",
+      "landAreaHe": 0.4400,
+      "landAreaSqFt": 2646,
+      "landAreaSqMt": 245.91,
+      "khasraNumber": "MM50"
+    },
+    "partyDetails": {
+      "seller": {
+        "name": "Mrs. Sudha Devi",
+        "address": "",
+        "isScheduledCaste": false
+      },
+      "buyer": {
+        "name": "Mr. Shashank Shekhar Singh",
+        "address": "House No. B-38/47 B-K Ground Floor Shri Hanuman Ji Society Motijheel Mahmurjan City Varanasi",
+        "isScheduledCaste": false,
+        "landOwnershipPostTransaction": null
+      }
+    },
+    "transactionDetails": {
+      "documentNumber": "914",
+      "documentDate": "07/02/2024",
+      "reportBasis": "transfer report of the accountant",
+      "registrationNumber": "",
+      "declarationIssued": true,
+      "objectionStatus": false,
+      "legalProceedingStatus": true
+    },
+    "orderDetails": {
+      "orderDate": "",
+      "orderStatus": "Rejected",
+      "effectiveDate": "",
+      "complaintDate": ""
+    },
+    "legalConditions": {
+      "landUnderSpecificAct": false,
+      "landTransferReportMention": true
+    },
+    "annulmentDetails": {
+      "hasAnnulment": false,
+      "annulmentOrderDate": "",
+      "annulmentEffectiveDate": ""
+    },
+    "transactionCancellation": {
+      "isCancelled": false,
+      "cancelledDate": "",
+      "reasonForCancellation": null
+    },
+    "evidenceDetails": {
+      "hasOriginalDocument": false,
+      "cadastralSurveyNumber": "",
+      "affidavitAsPer": true
+    },
+    "legalReferences": {
+      "specificLawsCited": []
+    },
+    "detailedOutcome": {
+      "ownershipTransfers": [],
+      "orderCancellationDetails": {
+        "cancelledOrders": []
+      }
+    },
+    "documentReferences": {
+      "saleDeed": "",
+      "affidavit": "",
+      "additionalDocuments": []
+    },
+    "landSurveyDetails": {
+      "surveyNumber": "",
+      "plotNumber": ""
+    },
+    "registrationDetails": {
+      "registrationOffice": "registration office, Varanasi",
+      "fileNumber": ""
+    }
+  }
+  
