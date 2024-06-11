@@ -1,0 +1,24 @@
+{
+    "courtDetails": {
+        "courtName": {
+            "question1": "What is the name of the court where the case proceedings took place?"
+        },
+        "courtLocation": {
+            "question2": "Where is the location of the court?"
+        },
+        "courtOfficer": {
+            "question3": "What is the name of the presiding court officer?"
+        }
+    },
+    "caseDetails": {
+        "caseNumber": {
+          "question4": "What is the case number?"
+        },
+        "year": {
+          "question5": "In which year did the case take place?"
+        },
+        "sectionUnder": {
+          "question6": "Under which section was the case filed?"
+        }
+    }
+}
