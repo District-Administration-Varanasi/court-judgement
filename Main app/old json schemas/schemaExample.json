@@ -1,0 +1,12 @@
+{
+    "court_name": { "type": "string" },
+    "court_location": { "type": "string" },
+    "section_under": { "type": "string" },
+    "moja": { "type": "string" },
+    "pargana": { "type": "string" },
+    "land_area_hectares": { "type": "number" },
+    "seller_address": { "type": "string" },
+    "seller_is_scheduled_caste": { "type": "boolean" },
+    "buyer_name": { "type": "string" },
+    "buyer_address": { "type": "string" }
+}

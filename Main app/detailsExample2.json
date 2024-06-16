@@ -1,0 +1,26 @@
+{
+    "court_name": {
+        "type": "string",
+        "example": ["Court of Tehsildar-Sadar"]
+    },
+    "court_location": {
+        "type": "string",
+        "example": ["Varanasi"]
+    },
+    "court_officer": {
+        "type": "string",
+        "example": ["Satish Verma"]
+    },
+    "case_number": {
+        "type": "string",
+        "example": ["202414700104414", "J202414700104425", "J202414700104274"]
+    },
+    "case_year": {
+        "type": "integer",
+        "example": [2023, 2024]
+    },
+    "section_under": {
+        "type": "string",
+        "example": ["34/35 UP Revenue Code"]
+    }
+}  

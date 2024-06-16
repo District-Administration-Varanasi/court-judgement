@@ -1,0 +1,13 @@
+{
+
+    "donation_deed_document_number": { "type": "string" },
+    "donation_deed_document_date": { "type": "string" },
+    "donation_deed_registered_office": { "type": "string" },
+    "donation_deed_description": { "type": "string" },
+    "prayer_petition_date": { "type": "string" },
+    "prayer_petition_accepted": { "type": "boolean" },
+    "prayer_petition_details": { "type": "string" },
+    "reinstatement_original_order_number": { "type": "string" },
+    "reinstatement_absence_of_objections": { "type": "boolean" },
+    "reinstatement_reason": { "type": "string" }
+}

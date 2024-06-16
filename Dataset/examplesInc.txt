@@ -1,0 +1,250 @@
+{
+  "court_name": {
+      "type": "string",
+      "example": ["Tehsildar-Sadar, Varanasi"]
+  },
+  "court_location": {
+      "type": "string",
+      "example": ["Varanasi", "Lucknow", "Delhi", "Mumbai", "Kolkata"]
+  },
+  "court_officer": {
+      "type": "string",
+      "example": ["Satish Verma", "Amit Sharma", "Rajesh Kumar", "Suresh Singh", "Anil Mehta"]
+  },
+  "case_number": {
+      "type": "string",
+      "example": ["J202414700104425", "J202414700104414", "J202414700104274", "J202414700104931", "J202414700104593"]
+  },
+  "case_year": {
+      "type": "integer",
+      "example": [2024, 2023, 2022, 2021, 2020]
+  },
+  "section_under": {
+      "type": "string",
+      "example": ["34/35 UP Revenue Code"]
+  },
+  "moja": {
+      "type": "string",
+      "example": ["Phulwaria", "Maduwadih", "Bhagwanpur", "Sarayanandan"]
+  },
+  "pargana": {
+      "type": "string",
+      "example": ["Dehat Amanat"]
+  },
+  "tehsil": {
+      "type": "string",
+      "example": ["Sadar"]
+  },
+  "district": {
+      "type": "string",
+      "example": ["Varanasi", "Lucknow", "Kanpur", "Allahabad", "Bareilly"]
+  },
+  "land_area_hectares": {
+      "type": "number",
+      "example": [0.1900, 0.3020, 0.4400, 0.2830, 0.1460,2.6, 7.8]
+  },
+  "land_area_sq_ft": {
+      "type": "number",
+      "example": [2720, 1360, 2646, 690, 550.8, 1563, 4500]
+  },
+  "land_area_sq_mt": {
+      "type": "number",
+      "example": [252.78, 126.39, 245.91, 64.12, 51.189,386,731]
+  },
+  "khasra_number": {
+      "type": "string",
+      "example": ["693", "M50", "529mi", "36"]
+  },
+  "seller_name": {
+      "type": "string",
+      "example": ["Shri Shriram", "Smt. Sudha Devi", "Smt. Sita Devi", "Shri Naseem Shah", "Shri Mohammad Hussain Ansari"]
+  },
+  "seller_address": {
+      "type": "string",
+      "example": [
+          "village Phulwaria, Pargana Dehat Amanat, Tehsil Sadar, District Varanasi",
+          "room number 443A D.L.W. city Varanasi",
+          "village Ishull, Tehsil Chakia, District Chandauli and present address Patel Nagar Colony, Bhagwanpur, Tehsil and District Varanasi",
+          "house number N. 13/31A-R-1 Saraisurjan Bajardiha Varanasi",
+          "Lohta Dhamariya Pargana Dehat Amanat Tehsil Sadar District Varanasi"
+      ]
+  },
+  "seller_is_scheduled_caste": {
+      "type": "boolean",
+      "example": [false, true]
+  },
+  "buyer_name": {
+      "type": "string",
+      "example": ["Smt. Seema Singh", "Shri Santosh Kumar Singh", "Mr. Shashank Shekhar Singh", "Mrs. Madhuri Devi", "Smt. Poonam Devi"]
+  },
+  "buyer_address": {
+      "type": "string",
+      "example": [
+          "Manasnagar Colony, Sector-B, Phulwaria, Varanasi",
+          "house number B-38/47 B-K first floor Shri Hanuman Ji Society Motijheel Mahmoorganj city Varanasi",
+          "village Ishull, Post Pachwania, Tehsil Chakia, District Chandauli",
+          "house number N. 14/227A2 Sarainandan Khojwa Varanasi",
+          "house number D 60/77 Choti Gaibi Keshavpur Police Station Laxsa Chhittupur City Varanasi"
+      ]
+  },
+  "buyer_is_scheduled_caste": {
+      "type": "boolean",
+      "example": [false, true]
+  },
+  "buyer_exceeds_12_5_acres": {
+      "type": "boolean",
+      "example": [false, true]
+  },
+  "document_number": {
+      "type": "string",
+      "example": ["1040", "1099", "914", "1133", "1227"]
+  },
+  "document_date": {
+      "type": "string",
+      "example": ["14/02/2024", "16/03/2021", "15/02/2020"]
+  },
+  "report_basis": {
+      "type": "string",
+      "example": ["transfer report of the Lekhpal"]
+  },
+  "registration_number": {
+      "type": "string",
+      "example": ["00149", "00398", "00907", "01016", "00472"]
+  },
+  "declaration_issued": {
+      "type": "boolean",
+      "example": [true, false]
+  },
+  "objection_status": {
+      "type": "boolean",
+      "example": [false, true]
+  },
+  "legal_proceeding_status": {
+      "type": "boolean",
+      "example": [false, true]
+  },
+  "order_date": {
+      "type": "string",
+      "example": ["2024", "2023", "2019", "2020", "2018"]
+  },
+  "order_status": {
+      "type": "string",
+      "example": ["undisputed"]
+  },
+  "order_effective_date": {
+      "type": "string",
+      "example": ["2024", "2023", "2022", "2021", "2020"]
+  },
+  "complaint_date": {
+      "type": "string",
+      "example": ["N/A"]
+  },
+  "land_under_specific_act": {
+      "type": "boolean",
+      "example": [false, true]
+  },
+  "land_transfer_report_mention": {
+      "type": "boolean",
+      "example": [true, false]
+  },
+  "annulment_exists": {
+      "type": "boolean",
+      "example": [false, true]
+  },
+  "annulment_order_date": {
+      "type": "string",
+      "example": ["N/A"]
+  },
+  "annulment_effective_date": {
+      "type": "string",
+      "example": ["N/A", "N/A", "N/A", "N/A", "N/A"]
+  },
+  "transaction_cancelled": {
+      "type": "boolean",
+      "example": [false, true]
+  },
+  "transaction_cancelled_date": {
+      "type": "string",
+      "example": ["N/A"]
+  },
+  "transaction_cancellation_reason": {
+      "type": "boolean",
+      "example": [false, true]
+  },
+  "original_document_exists": {
+      "type": "boolean",
+      "example": [true, false]
+  },
+  "cadastral_survey_number": {
+      "type": "string",
+      "example": ["693", "M50", "529mi", "36", "480B"]
+  },
+  "affidavit_submitted": {
+      "type": "boolean",
+      "example": [true, false]
+  },
+  "specific_laws_cited": {
+      "type": "array",
+      "items": { "type": "string" },
+      "example": [["34/35 UP Revenue Code"]]
+  },
+  "ownership_transfer_from": {
+      "type": "string",
+      "example": ["Shri Shriram", "Smt. Sudha Devi", "Smt. Sita Devi", "Shri Naseem Shah", "Shri Mohammad Hussain Ansari"]
+  },
+  "ownership_transfer_to": {
+      "type": "string",
+      "example": ["Smt. Seema Singh", "Shri Santosh Kumar Singh", "Mr. Shashank Shekhar Singh", "Mrs. Madhuri Devi", "Smt. Poonam Devi"]
+  },
+  "ownership_transfer_share": {
+      "type": "number",
+      "example": [100, 100, 100, 100, 100]
+  },
+  "ownership_transfer_land_description": {
+      "type": "string",
+      "example": [
+          "area 2720 sq. ft. i.e. area-252.78 sq. meter",
+          "area 1360 sq. ft. i.e. area-126.39 sq. meter",
+          "area 2646 sq. ft. i.e. area-245.91 sq. meter",
+          "area 690 sq. ft. i.e. area-64.12 sq. meter",
+          "area 550.8 sq. ft. i.e. area-51.189 sq. meter"
+      ]
+  },
+  "order_cancellation_number": {
+      "type": "string",
+      "example": ["N/A"]
+  },
+  "order_cancellation_date": {
+      "type": "string",
+      "example": ["N/A"]
+  },
+  "sale_deed_number": {
+      "type": "string",
+      "example": ["1040", "1099", "914", "1133", "1227"]
+  },
+  "affidavit_number": {
+      "type": "string",
+      "example": ["N/A"]
+  },
+  "additional_documents": {
+      "type": "array",
+      "items": { "type": "string" },
+      "example": [["N/A"]]
+  },
+  "survey_number": {
+      "type": "string",
+      "example": ["693", "M50", "529mi", "36", "480B"]
+  },
+  "plot_number": {
+      "type": "string",
+      "example": ["693", "M50", "529mi", "36", "480B"]
+  },
+  "registration_office": {
+      "type": "string",
+      "example": ["Varanasi", "Lucknow", "Delhi", "Mumbai", "Kolkata"]
+  },
+  "registration_file_number": {
+      "type": "string",
+      "example": ["N/A"]
+  }
+}
