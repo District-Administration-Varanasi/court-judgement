@@ -1,11 +1,13 @@
 {
-    "court_name": "न्यायालय-तहसीलदार-सदर",
-    "section_under": "34/35 उप्र राजस्व संहिता",
-    "tehsil": "सदर तहसील",
-    "seller_name": "श्री मोहम्मद हुसैन अंसारी",
-    "buyer_address": "घर नं. सी.15/21 लहंगपुरा लल्लापुरा पितरकुंडा वाराणसी",
-    "order_status": "क्रेता के पक्ष में स्थानांतरण की कार्यवाही",
-    "ownership_transfer_share": 50,
-    "additional_documents": ["पहचान प्रमाण पत्र", "आवासीय प्रमाण पत्र", "लेनदेन की रसीदें"],
     "crop_year": "1426-1431 F"
+}
+{
+    "additional_documents": ["extract Khatauni", "affidavit", "original sale deed"],
+    "buyer_address": "Manasnagar Colony, Sector-B, Phulwaria, Varanasi",
+    "court_name": "Court of Tehsildar-Sadar",
+    "crop_year": "1425-1430 F",
+    "order_status": "transfer proceedings in favour of the buyer",
+    "ownership_transfer_share": "100",
+    "section_under": "34/35 UP Revenue Code",
+    "seller_name": "Shri Shriram"
 }

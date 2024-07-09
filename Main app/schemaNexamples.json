@@ -33,7 +33,7 @@
     },
     "tehsil": {
         "type": "string",
-        "example": ["Sadar"]
+        "example": ["Sadar Tehsil", "Sadar", "Tehsil Sadar"]
     },
     "district": {
         "type": "string",

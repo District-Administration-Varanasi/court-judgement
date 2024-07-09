@@ -184,6 +184,24 @@ def check_dict(d, q_dict, expected):
             unans_expected_v[key] = expected[key]
     return unans_q, unans_expected_v
 
+def create_null_json(input_json_path, output_json_path):
+    # Load the input JSON file
+    with open(input_json_path, 'r') as input_file:
+        data = json.load(input_file)
+
+    # Create a new dictionary with null values or empty lists based on the input schema
+    null_data = {}
+    for key, value in data.items():
+        if value['type'] == 'array':
+            null_data[key] = []
+        else:
+            null_data[key] = None
+
+    # Write the new dictionary to the output JSON file
+    with open(output_json_path, 'w') as output_file:
+        json.dump(null_data, output_file, indent=2)
+
+
 ################################# BEGINS ###################################################
 
 #INITIALIZATION:    
@@ -200,13 +218,16 @@ print_q(hin_q_str)
 print("\n आपके उत्तर JSON प्रारूप में: \n")
 user_ans_str_hin = input("")
 
-#creating empty or null JSON object
-current_json = load_json('emptyDetails.json') 
-current_json_str = json.dumps(current_json)
-
 #creating expected JSON values   
 expected_dict_ans = load_json('schemaNexamples.json') 
 #expected_ans_str = json.dumps(expected_dict_ans)
+
+#creating empty or null JSON object
+input_json_path = 'schemaNexamples.json'
+output_json_path = 'emptyDetails.json'
+create_null_json(input_json_path, output_json_path)
+current_json = load_json('emptyDetails.json') 
+current_json_str = json.dumps(current_json)
 
 
 #loop for filling current JSON object and reframing questions:
