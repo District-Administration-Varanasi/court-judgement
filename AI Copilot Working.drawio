@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-07-15T13:33:44.603Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="lSy_qRk9Xt2OPa8v7kuv" version="24.6.4" type="device">
+<mxfile host="app.diagrams.net" modified="2024-07-15T14:43:56.119Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="pfGUQuOfTkK4329TldyI" version="24.6.4" type="device">
   <diagram name="Page-1" id="6cDiMC7X2h6hoGH8aV63">
-    <mxGraphModel dx="2781" dy="1913" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2479" dy="1933" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -10,7 +10,7 @@
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-6">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="sJcKTsTLh-VLgnzeDOs7-2" value="GPT 3.5 turbo" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-6">
+        <mxCell id="sJcKTsTLh-VLgnzeDOs7-2" value="generate_questions()&lt;div&gt;+&lt;/div&gt;&lt;div&gt;create_null_json()&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-6">
           <mxGeometry x="30" y="15" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sJcKTsTLh-VLgnzeDOs7-7" target="sJcKTsTLh-VLgnzeDOs7-9">
@@ -30,8 +30,8 @@
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-20" value="Schema" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-14">
           <mxGeometry x="-35" y="10" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="sJcKTsTLh-VLgnzeDOs7-19" value="Generated Q.(s)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-14">
-          <mxGeometry x="-35" y="110" width="60" height="30" as="geometry" />
+        <mxCell id="sJcKTsTLh-VLgnzeDOs7-19" value="Generated Q.(s)&lt;div&gt;+&lt;/div&gt;&lt;div&gt;current JSON&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-14">
+          <mxGeometry x="-35" y="128" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-26" value="/generate_q" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-14">
           <mxGeometry x="45" y="55" width="60" height="30" as="geometry" />
@@ -64,9 +64,9 @@
           <mxGeometry x="290" y="280" width="170" height="30" as="geometry" />
         </mxCell>
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-53" value="q_dict_unans + current_JSON + expected_dict_ans" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="415" y="240" width="170" height="30" as="geometry" />
+          <mxGeometry x="480" y="212.5" width="170" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="sJcKTsTLh-VLgnzeDOs7-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sJcKTsTLh-VLgnzeDOs7-41" target="sJcKTsTLh-VLgnzeDOs7-53">
+        <mxCell id="sJcKTsTLh-VLgnzeDOs7-52" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sJcKTsTLh-VLgnzeDOs7-41" target="sJcKTsTLh-VLgnzeDOs7-53">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="880" y="225" as="targetPoint" />
           </mxGeometry>
@@ -105,7 +105,7 @@
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-86" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-85">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="sJcKTsTLh-VLgnzeDOs7-87" value="GPT 3.5 turbo" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-85">
+        <mxCell id="sJcKTsTLh-VLgnzeDOs7-87" value="create.py module" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-85">
           <mxGeometry x="25" y="15" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="sJcKTsTLh-VLgnzeDOs7-75" target="sJcKTsTLh-VLgnzeDOs7-86">
@@ -113,9 +113,6 @@
         </mxCell>
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="sJcKTsTLh-VLgnzeDOs7-86" target="sJcKTsTLh-VLgnzeDOs7-75">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="sJcKTsTLh-VLgnzeDOs7-91" value="Text" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="250" y="740" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-75" value="" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="410" y="640" width="150" height="140" as="geometry" />
@@ -150,14 +147,14 @@
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-3" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-5">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="sJcKTsTLh-VLgnzeDOs7-4" value="GPT 4o" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-5">
-          <mxGeometry x="25" y="15" width="60" height="30" as="geometry" />
+        <mxCell id="sJcKTsTLh-VLgnzeDOs7-4" value="fill_JSON_schema()&lt;div&gt;+&lt;/div&gt;&lt;div&gt;check_dict()&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-5">
+          <mxGeometry x="30" y="15" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-42" value="current_json_str +&lt;div&gt;user_ans_str&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;container=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-95">
           <mxGeometry y="100" width="95" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="sJcKTsTLh-VLgnzeDOs7-43" value="current_json&lt;div&gt;(updated)&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;container=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-95">
-          <mxGeometry x="180" y="100" width="60" height="30" as="geometry" />
+        <mxCell id="sJcKTsTLh-VLgnzeDOs7-43" value="current_json&lt;div&gt;(updated)&lt;br&gt;+&lt;/div&gt;&lt;div&gt;q_dict_unans&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;container=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-95">
+          <mxGeometry x="180" y="107" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-47" value="" style="group" vertex="1" connectable="0" parent="sJcKTsTLh-VLgnzeDOs7-95">
           <mxGeometry x="60" y="125" width="150" height="140" as="geometry" />
@@ -174,7 +171,7 @@
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="sJcKTsTLh-VLgnzeDOs7-95" source="sJcKTsTLh-VLgnzeDOs7-3" target="sJcKTsTLh-VLgnzeDOs7-41">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="sJcKTsTLh-VLgnzeDOs7-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sJcKTsTLh-VLgnzeDOs7-53" target="sJcKTsTLh-VLgnzeDOs7-29">
+        <mxCell id="sJcKTsTLh-VLgnzeDOs7-96" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sJcKTsTLh-VLgnzeDOs7-53" target="sJcKTsTLh-VLgnzeDOs7-29">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="590" y="270" as="sourcePoint" />
             <mxPoint x="540" y="390" as="targetPoint" />
@@ -201,7 +198,7 @@
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-55" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-54">
           <mxGeometry width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="sJcKTsTLh-VLgnzeDOs7-56" value="GPT 3.5 turbo" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-54">
+        <mxCell id="sJcKTsTLh-VLgnzeDOs7-56" value="reframe_Q()" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-54">
           <mxGeometry x="25" y="15" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="sJcKTsTLh-VLgnzeDOs7-58" value="new_Q_dict_str" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;container=0;" vertex="1" parent="sJcKTsTLh-VLgnzeDOs7-106">
