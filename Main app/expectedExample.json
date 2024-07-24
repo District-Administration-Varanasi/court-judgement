@@ -1,0 +1,30 @@
+{
+    "section_under": {
+        "type": "string",
+        "example": ["34/35 UP Revenue Code"]
+    },
+    "moja": {
+        "type": "string",
+        "example": ["Phulwaria", "Sirgovardhanpur", "Maduwadih", "Bhagwanpur", "Lohta", "Khanawan"]
+    },
+    "land_area_hectares": {
+        "type": "number",
+        "example": [0.1900, 0.4400, 0.3020, 0.1460, 0.0970, 0.2800, 0.1540, 0.0250]
+    },
+    "seller_address": {
+        "type": "string",
+        "example": ["village Phulwaria, Pargana Dehat Amanat, Tehsil Sadar, District Varanasi", "address room number 443A D.L.W. city Varanasi", "village Ishull, Tehsil Chakia, District Chandauli", "Lohta Dhamariya Pargana Dehat Amanat Tehsil Sadar District Varanasi", "Lohta Alaval Pargana Dehat Amanat Tehsil Sadar District Varanasi", "village Khanawaan (Khanaon) Pargana Dehat Amanat Tehsil Sadar District Varanasi", "Maruti Nagar Colony Sir Govardhanpur, Varanasi", "H.No. D 60/77 Choti Gaibi Keshavpur Police Station Laxsa Chhittupur City Varanasi"]
+    },
+    "seller_is_scheduled_caste": {
+        "type": "boolean",
+        "example": [false, true]
+    },
+    "buyer_name": {
+        "type": "string",
+        "example": ["Shri Santosh Kumar Singh", "Mr. Shashank Shekhar Singh", "Mrs. Madhuri Devi", "Smt. Naseem Bano", "Shri Jalaluddin", "Mrs. Sunita Singh", "Shri Sunit Kumar Giri", "Mr. Kashinath Pandey"]
+    },
+    "buyer_address": {
+        "type": "string",
+        "example": ["Manasnagar Colony, Sector-B, Phulwaria, Varanasi", "house number B-38/47 B-K first floor Shri Hanuman Ji Society Motijheel Mahmoorganj city Varanasi", "village Ishull, Post Pachwania, Tehsil Chakia, District Chandauli", "address village Lohta Alaval Ward No.-52 Pargana Dehat Amanat Tehsil Sadar District Varanasi", "village Talar post Khairpur Semra Rajgarh Mirzapur", "address village Lohri Saran Bihar", "address village Pandey Pipra Post Sukal Pipra Mohaniya Kaimur Bihar"]
+    }
+}

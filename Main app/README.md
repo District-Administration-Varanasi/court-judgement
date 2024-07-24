@@ -1,7 +1,8 @@
 # Steps to get started:
 
+ 0. This is an old README, refer to API endpoint documentation in issues of the repo.
  1. Create a .env file in the same directory as of main.py.
- 2. Paste the following line and replace `{YOUR_CODE}` with your OpenAI API key.
+ 2. Paste the following line and replace `{YOUR_KEY}` with your OpenAI API key.
  `OPENAI_API_KEY={YOUR_KEY}`
 
  3. (Optional) Create a new conda environment and activate it. 
