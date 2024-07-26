@@ -1,0 +1,11 @@
+{
+    "court_name": { "type": "string", "const": "न्यायालय तहसीलदार-सदर" },
+    "court_location": { "type": "string", "const": "वाराणसी" },
+    "court_officer": { "type": "string", "const": "सतीश वर्मा" },
+    "case_year": { "type": "integer", "const": 2024 },
+    "section_under": { "type": "string", "const": "धारा-34/35 उ0 प्र0 राजस्व संहिता" },
+    "pargana": { "type": "string", "const": "देहात अमानत" },
+    "tehsil": { "type": "string", "const": "सदर" },
+    "district": { "type": "string", "const": "वाराणसी" },
+    "report_basis": { "type": "string", "const": "लेखपाल के हस्तांतरण रिपोर्ट" }
+}

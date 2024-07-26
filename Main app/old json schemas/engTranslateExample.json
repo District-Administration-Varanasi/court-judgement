@@ -1,0 +1,22 @@
+{
+    "courtDetails": {
+        "courtName": "Court Tehsildar-Sadar",
+        "courtLocation": "Varanasi",
+        "courtOfficer": "Satish Verma"
+    },
+    "caseDetails": {
+        "caseNumber": "J202414700104593",
+        "year": 2024,
+        "sectionUnder": "34/35 UP Revenue Code"
+    },
+    "landDetails": {
+        "moja": "Sarayanandan",
+        "pargana": "Dehat Amanat",
+        "tehsil": "Sadar",
+        "district": "Varanasi",
+        "landAreaHe": "0.2830 hectares",
+        "landAreaSqFt": "550.8 sq. ft.",
+        "landAreaSqMt": "51.189 sq. m.",
+        "khasraNumber": "36"
+    }
+}

@@ -1,0 +1,171 @@
+{
+    "court_name": {
+        "type": "string",
+        "example": ["Court of Tehsildar-Sadar"]
+    },
+    "court_location": {
+        "type": "string",
+        "example": ["Varanasi"]
+    },
+    "court_officer": {
+        "type": "string",
+        "example": ["Satish Verma"]
+    },
+    "case_number": {
+        "type": "string",
+        "example": ["202414700104414", "J202414700104425", "J202414700104274"]
+    },
+    "case_year": {
+        "type": "integer",
+        "example": [2023, 2024]
+    },
+    "section_under": {
+        "type": "string",
+        "example": ["34/35 UP Revenue Code", "34/35 Uttar Pradesh Revenue Code"]
+    },
+    "moja": {
+        "type": "string",
+        "example": ["Phulwaria", "Sirgovardhanpur", "Maduwadih", "Bhagwanpur", "Lohta", "Khanawan"]
+    },
+    "pargana": {
+        "type": "string",
+        "example": ["Dehat Amanat"]
+    },
+    "tehsil": {
+        "type": "string",
+        "example": ["Sadar Tehsil", "Sadar", "Tehsil Sadar"]
+    },
+    "district": {
+        "type": "string",
+        "example": ["Varanasi"]
+    },
+    "land_area_hectares": {
+        "type": "number",
+        "example": [0.1900, 0.4400, 0.3020, 0.1460, 0.0970, 0.2800, 0.1540, 0.0250]
+    },
+    "land_area_sq_ft": {
+        "type": "number",
+        "example": [1360, 2646, 690, 512, 652.6, 2736, 903, 2720]
+    },
+    "land_area_sq_mt": {
+        "type": "number",
+        "example": [126.39, 245.91, 64.12, 47.58, 60.64, 254.275, 83.92, 252.788]
+    },
+    "khasra_code": {
+        "type": "string",
+        "example": ["693", "1009m", "M50", "529mi", "480B", "170", "802", "1059/2mi"]
+    }, 
+    "seller_name": {
+        "type": "string",
+        "example": ["Shri Shriram", "Smt. Sudha Devi", "Smt. Sita Devi", "Shri Mohammad Hussain Ansari", "Shri Usman", "Shri Ramchandra", "Shri Krishna Kumar Singh", "Shri Pramod Kumar Yadav"]
+    },
+    "seller_address": {
+        "type": "string",
+        "example": ["village Phulwaria, Pargana Dehat Amanat, Tehsil Sadar, District Varanasi", "address room number 443A D.L.W. city Varanasi", "village Ishull, Tehsil Chakia, District Chandauli", "Lohta Dhamariya Pargana Dehat Amanat Tehsil Sadar District Varanasi", "Lohta Alaval Pargana Dehat Amanat Tehsil Sadar District Varanasi", "village Khanawaan (Khanaon) Pargana Dehat Amanat Tehsil Sadar District Varanasi", "Maruti Nagar Colony Sir Govardhanpur, Varanasi", "H.No. D 60/77 Choti Gaibi Keshavpur Police Station Laxsa Chhittupur City Varanasi"]
+    },
+    "seller_is_scheduled_caste": {
+        "type": "boolean",
+        "example": [false, true]
+    },
+    "buyer_name": {
+        "type": "string",
+        "example": ["Shri Santosh Kumar Singh", "Mr. Shashank Shekhar Singh", "Mrs. Madhuri Devi", "Smt. Naseem Bano", "Shri Jalaluddin", "Mrs. Sunita Singh", "Shri Sunit Kumar Giri", "Mr. Kashinath Pandey"]
+    },
+    "buyer_address": {
+        "type": "string",
+        "example": ["Manasnagar Colony, Sector-B, Phulwaria, Varanasi", "house number B-38/47 B-K first floor Shri Hanuman Ji Society Motijheel Mahmoorganj city Varanasi", "village Ishull, Post Pachwania, Tehsil Chakia, District Chandauli", "address village Lohta Alaval Ward No.-52 Pargana Dehat Amanat Tehsil Sadar District Varanasi", "village Talar post Khairpur Semra Rajgarh Mirzapur", "address village Lohri Saran Bihar", "address village Pandey Pipra Post Sukal Pipra Mohaniya Kaimur Bihar"]
+    },
+    "buyer_is_scheduled_caste": {
+        "type": "boolean",
+        "example": [false, true]
+    },
+    "buyer_exceeds_12_5_acres": {
+        "type": "boolean",
+        "example": [false, true]
+    },
+    "registered_sale_deed_number": {
+        "type": "number",
+        "example": [1099, 1040, 914, 1133, 8896, 181, 9263, 1782, 3213]
+    },
+    "registered_sale_deed_date": {
+        "type": "string",
+        "format": "date",
+        "example": ["2024-02-14", "2024-02-07", "2024-02-16", "2023-12-19", "2024-01-10", "2023-12-22", "2023-03-20", "2023-05-19"]
+    },
+    "report_basis": {
+        "type": "string",
+        "example": ["transfer report of the Lekhpal"]
+    },
+    "declaration_issued": {
+        "type": "boolean",
+        "example": [true, false]
+    },
+    "objection_status": {
+        "type": "boolean",
+        "example": [false, true]
+    },
+    "order_status": {
+        "type": "string",
+        "example": ["transfer proceedings in favour of the buyer"]
+    },
+    "land_under_specific_act": {
+        "type": "boolean",
+        "example": [false, true]
+    },
+    "land_transfer_report_mention": {
+        "type": "boolean",
+        "example": [true, false]
+    },
+    "annulment_exists": {
+        "type": "boolean",
+        "example": [true, false]
+    },
+    "annulment_order_date": {
+        "type": "string",
+        "format": "date",
+        "example": ["2024-02-14", "2024-03-18", "2024-03-02", "2023-05-17", "2023-07-15"]
+    },
+    "annulment_reason": {
+        "type": "string",
+        "example": ["absence of original deed, affidavit and other evidence"]
+    },
+    "original_sale_deed_exists": {
+        "type": "boolean",
+        "example": [true, false]
+    },
+    "affidavit_submitted": {
+        "type": "boolean",
+        "example": [true, false]
+    },
+    "ownership_transfer_from": {
+        "type": "string",
+        "example": ["Shri Shriram", "Smt. Sudha Devi", "Smt. Sita Devi", "Shri Mohammad Hussain Ansari", "Shri Usman", "Shri Ramchandra", "Shri Krishna Kumar Singh", "Shri Pramod Kumar Yadav"]
+    },
+    "ownership_transfer_to": {
+        "type": "string",
+        "example": ["Shri Santosh Kumar Singh", "Mr. Shashank Shekhar Singh", "Mrs. Madhuri Devi", "Smt. Naseem Bano", "Shri Jalaluddin", "Mrs. Sunita Singh", "Shri Sunit Kumar Giri", "Mr. Kashinath Pandey"]
+    },
+    "ownership_transfer_share": {
+        "type": "number",
+        "example": [100]
+    },
+    "additional_documents": {
+        "type": "array",
+        "items": {
+            "type": "string"
+        },
+        "example": ["extract Khatauni", "affidavit", "original sale deed"]
+    },
+    "registration_office": {
+        "type": "string",
+        "example": ["Registration Office Varanasi"]
+    },
+    "objection_absence": {
+        "type": "boolean",
+        "example": [true, false]
+    },
+    "crop_year": {
+        "type": "string",
+        "example": ["1425-1430 F", "1430-1435 F", "1427-1432 F", "1428-1433 F"]
+    }
+}

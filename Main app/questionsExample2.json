@@ -1,0 +1,8 @@
+{
+  "court_name": "What is the name of the court where the case proceedings took place?",
+  "court_location": "Where is the location of the court?",
+  "court_officer": "What is the name of the presiding court officer?",
+  "case_number": "What is the case number?",
+  "case_year": "In which year was the case filed?",
+  "section_under": "Under which section was the case filed?"
+}
