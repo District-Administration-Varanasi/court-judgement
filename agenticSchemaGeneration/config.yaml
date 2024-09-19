@@ -1,0 +1,259 @@
+# AutoGen Configuration
+
+# OpenAI API Configuration
+openai:
+  model: "gpt-4o"
+  api_key: "enter your api key here"
+
+# LLM Configuration
+llm_config:
+  timeout: 600
+  cache_seed: 42
+  temperature: 0
+  functions:
+    - name: "python"
+      description: "run cell in ipython and return the execution result."
+      parameters:
+        type: "object"
+        properties:
+          cell:
+            type: "string"
+            description: "Valid Python cell to execute."
+        required: ["cell"]
+
+# Project Settings
+project:
+  path: "os.getcwd()"
+  batch_size: 5
+
+# Agent Configurations
+agents:
+  schema_generator:
+    name: "schema_generator"
+    system_message: "Specializes in reading court order documents (.txt only) iteratively and generating comprehensive having each any every information in the document stored as keys. For an example document like this: {example_document}, ideal schema output is {example_schema}. Observe that each key has both properties- type and examples. Take it simply for reference for level of detail. Source the keys and examples purely from provided text documents. Generated schema should not be nested. Prefer boolean keys where possible. A key could have two properties- type and example list. For a given set of documents, the output schema should be completely different and unique. It reads and updates schema for only {batch_size} documents at a time, updating the schema after each batch.It should mainly look for adding new keys to incorporate even very small details. Update in examples is a byproduct. Listen to the critique agent for feedback on the schema generated and update the schema accordingly. Be verbose in terms of process being followed."
+
+  user_interface:
+    name: "user_interface"
+    system_message: "Admin interface for user input. Supports user queries and termination signals. Invoke human feedback after each batch of schema generation and evaluation"
+    code_execution_config:
+      work_dir: "coding"
+      use_docker: false
+    max_consecutive_auto_reply: 3
+    human_input_mode: "TERMINATE"
+
+  critique:
+    name: "critique"
+    system_message: "Strictly checks if schema generated at the end of a batch captures all information in a randomly selected original document. Be verbose in telling the flaws in the schema generated and just direct the schema_generator to add keys that you feel are absent. Take reference of the original document and check that each and every word of the original document can be regenerated using the schema. Direct schema_generator to update those keys This is the endgoal. If schema is not flat, instruct to flatten it. Be verbose in terms of process being followed."
+
+# GroupChat Configuration
+groupchat:
+  agents:
+    - user_interface
+    - schema_generator
+    - critique
+  max_round: 100000
+
+# Initial User Message
+initial_message: " Use Python only. Return the schema in standard JSON format. Load the text court orders from the provided folder path {PATH}. The files are inside the folder. First and foremost, read the text files for first batch. Calculate number of batches before processing first batch. Read the court judgments iteratively, updating and improving the schema along with examples each time after reading a batch through critique's feedback. Ensure that all boolean values in the schema use Python's True and False instead of true and false. At the end, save the final schema as output.json. All agents should use JSON format when generating code."
+
+# Example Document and Schema
+example_document: |
+  Court Tehsildar-Sadar, Varanasi. Case number-J202314700108547 year-2023 under section-34/35 UP Revenue Code, Mauza-Sirgovardhanpur Pargana-Dehat Amanat, Tehsil-Sadar District-Varanasi
+
+  Shri Sunit Kumar Giri vs Shri Krishna Kumar Singh
+
+  Decision
+  This suit of transfer is recorded on the registered sale deed number-1782
+  dated-20/03/2023 received from the registration office Varanasi. Which was instituted on the basis of the transfer report of the Lekhpal. Arazi number-1009m. Out of the area of ​​0.1540 hectare, area of ​​903 square feet i.e. area-83.92 square meters situated in Mauza-Sirgovardhanpur Pargana-Dehat Amanat, Tehsil and District-Varanasi has been sold by Shri Krishna Kumar Singh to the impostor Shri Sunit Kumar Giri. As per rules, the suit was registered and a proclamation letter was issued, which was served and the attached file is attached. The suit has been dismissed on 17-05-2023 in the absence of copy of deed, affidavit and other evidence. The applicant has given a request letter dated 06-04-2024. Which is accepted. The ex-parte order dated 17-05-2023 is cancelled and the suit is filed on the original number. In the absence of any objection, the suit is undisputed.
+
+  The buyer has stated in his evidence that even after purchasing the said land, the buyer will have less than twelve and a half acres of land as per the copy of sale deed, extract Khatauni, affidavit. The said land is not the land falling under Section 77 of the Gram Sabha and Revenue Code, the seller and the buyer are not from the Scheduled Caste. No adverse fact is mentioned in the transfer report. From the observation of the evidence available on the file, it appears legally consistent to carry out the transfer proceedings in favor of the buyer.
+
+  Order Hence, in mouza-Sirgovardhanpur Pargana-Dehat Amanat, Tehsil and District-Varanasi, account number-00227 of crop year 1430-1435 F., land number-1009 mi. out of 0.1540 hectare area is 903 sq. ft. i.e. area-83.92 sq. meter from the land revenue payee account, the name of the seller Shri Krishna Kumar Singh son of late Daroga Singh, address Maruti Nagar Colony Sir Govardhanpur, Varanasi, should be cancelled and the name of the buyer Shri Sunil Kumar Giri son of Ved Prakash Giri, address village Lohri Saran Bihar should be mentioned as transferable landholder co-shared holder. After the execution of the record, the file should be filed in the office.
+
+  Satish Verma
+  Tehsildar-Sadar
+  Varanasi.
+
+example_schema: |
+  {
+    "court_name": {
+      "type": "string",
+      "examples": ["Court Tehsildar-Sadar, Varanasi", "Court of Tehsildar-Sadar, Varanasi", "Court Tehsildar-Sadar, Allahabad", "Court of Tehsildar-Sadar, Lucknow"]
+    },
+    "case_number": {
+      "type": "string",
+      "examples": ["J202414700100022", "202414700105301", "J202414700104026", "202314700139378"]
+    },
+    "year": {
+      "type": "number",
+      "examples": [2024, 2023, 2022, 2021]
+    },
+    "section": {
+      "type": "string",
+      "examples": ["34/35 UP Revenue Code", "34/35 U.P. Revenue Code", "34/35 of UP Revenue Code", "34/35 UP Revenue Act"]
+    },
+    "mauza": {
+      "type": "string",
+      "examples": ["Khanawan", "Lohta", "Sirgovardhanpur", "Maduwadih"]
+    },
+    "pargana": {
+      "type": "string",
+      "examples": ["Dehat Amanat", "Dehat", "Amanat", "Urban"]
+    },
+    "tehsil": {
+      "type": "string",
+      "examples": ["Sadar", "Chakia", "Varanasi", "Allahabad"]
+    },
+    "district": {
+      "type": "string",
+      "examples": ["Varanasi", "Allahabad", "Lucknow", "Chandauli"]
+    },
+    "plaintiff": {
+      "type": "string",
+      "examples": ["Smt. Sunita Singh", "Shri Jalaluddin", "Smt. Naseem Bano", "Shri Kashinath Pandey"]
+    },
+    "defendant": {
+      "type": "string",
+      "examples": ["Shri Ramchandra", "Shri Usman", "Shri Mohammad Hussain Ansari", "Shri Pramod Kumar Yadav"]
+    },
+    "document_type": {
+      "type": "string",
+      "examples": ["sale deed", "donation letter", "transfer deed", "gift deed"]
+    },
+    "decision_document_number": {
+      "type": "string",
+      "examples": ["9263", "181", "8896", "3213"]
+    },
+    "decision_document_date": {
+      "type": "string",
+      "examples": ["22/12/2023", "10/01/2024", "19/12/2023", "19/05/2023"]
+    },
+    "decision_transfer_report_basis": {
+      "type": "string",
+      "examples": ["transfer report of the Lekhpal", "report of the Lekhpal", "Lekhpal's report", "Lekhpal transfer report"]
+    },
+    "decision_arazi_number": {
+      "type": "string",
+      "examples": ["802", "170", "480B", "1059/2mi"]
+    },
+    "decision_area_hectare": {
+      "type": "number",
+      "examples": [0.2800, 0.0970, 0.1460, 0.0250]
+    },
+    "decision_area_square_feet": {
+      "type": "number",
+      "examples": [2736, 652.6, 512, 2720]
+    },
+    "decision_area_square_meters": {
+      "type": "number",
+      "examples": [254.275, 60.64, 47.58, 252.788]
+    },
+    "decision_total_purchased_area_square_feet": {
+      "type": "number",
+      "examples": [null, 1700, 1360, 680]
+    },
+    "decision_total_purchased_area_square_meters": {
+      "type": "number",
+      "examples": [null, 126.394, 63.19, 50.56]
+    },
+    "decision_buyer_name": {
+      "type": "string",
+      "examples": ["Smt. Sunita Singh", "Shri Jalaluddin", "Smt. Naseem Bano", "Shri Kashinath Pandey"]
+    },
+    "decision_buyer_address": {
+      "type": "string",
+      "examples": ["village Talar post Khairpur Semra Rajgarh Mirzapur", "Lohta Alaval Ward No.-52 Pargana Dehat Amanat Tehsil Sadar District Varanasi", "Lohta Dhamariya Pargana Dehat Amanat Tehsil Sadar District Varanasi", "village Pandey Pipra Post Sukal Pipra Mohaniya Kaimur Bihar"]
+    },
+    "decision_seller_name": {
+      "type": "string",
+      "examples": ["Shri Ramchandra", "Shri Usman", "Shri Mohammad Hussain Ansari", "Shri Pramod Kumar Yadav"]
+    },
+    "decision_seller_address": {
+      "type": "string",
+      "examples": ["village Khanawaan (Khanaon) Pargana Dehat Amanat Tehsil Sadar District Varanasi", "Lohta Alaval Pargana Dehat Amanat Tehsil Sadar District Varanasi", "Lohta Dhamariya Pargana Dehat Amanat Tehsil Sadar District Varanasi", "H.No. D 60/77 Choti Gaibi Keshavpur Police Station Laxsa Chhittupur City Varanasi"]
+    },
+    "decision_seller_designation": {
+      "type": "string",
+      "examples": [null, "Principal Director Parmarth Kidney Care Pvt. Ltd.", "alias Sudha Sharma", "alias Ramchand Rai"]
+    },
+    "decision_seller_alias": {
+      "type": "string",
+      "examples": ["Ramchand Rai", "alias Sudha Sharma", "alias Ramchand Rai", null]
+    },
+    "decision_donor_name": {
+      "type": "string",
+      "examples": [null, "Shri Vijay Kumar Pal", null, null]
+    },
+    "decision_donee_name": {
+      "type": "string",
+      "examples": [null, "Smt. Sushila Devi", null, null]
+    },
+    "decision_objection_status": {
+      "type": "bool",
+      "examples": [false, true, false, true]
+    },
+    "decision_buyer_land_holding": {
+      "type": "number",
+      "examples": [12.5, 10, 8, 15]
+    },
+    "decision_land_section_77_status": {
+      "type": "bool",
+      "examples": [false, true, false, true]
+    },
+    "decision_buyer_scheduled_caste_status": {
+      "type": "bool",
+      "examples": [false, true, false, true]
+    },
+    "decision_seller_scheduled_caste_status": {
+      "type": "bool",
+      "examples": [false, true, false, true]
+    },
+    "decision_adverse_fact_status": {
+      "type": "bool",
+      "examples": [false, true, false, true]
+    },
+    "decision_legal_appropriateness": {
+      "type": "bool",
+      "examples": [true, false, true, false]
+    },
+    "order_account_number": {
+      "type": "string",
+      "examples": ["00505", "00659", "00380", "00472"]
+    },
+    "order_crop_year_start": {
+      "type": "number",
+      "examples": [1428, 1427, 1426, 1430]
+    },
+    "order_crop_year_end": {
+      "type": "number",
+      "examples": [1433, 1432, 1431, 1435]
+    },
+    "order_land_revenue_pay_account": {
+      "type": "string",
+      "examples": ["land revenue parta account", "land revenue pay account", "land revenue payment account", "land revenue payee account"]
+    },
+    "order_transferable_landholder_co_sharedar": {
+      "type": "string",
+      "examples": ["Smt. Sunita Singh", "Shri Jalaluddin", "Smt. Naseem Bano", "Shri Kashinath Pandey"]
+    },
+    "order_execution_status": {
+      "type": "bool",
+      "examples": [true, false, true, false]
+    },
+    "order_suit_status": {
+      "type": "string",
+      "examples": ["undisputed", "dismissed", "reinstated", "cancelled"]
+    },
+    "order_execution_date": {
+      "type": "string",
+      "examples": ["03-04-2024", "04-04-2024", "03-06-2019", "18-03-2024"]
+    },
+    "officer_name": {
+      "type": "string",
+      "examples": ["Satish Verma", "Rajesh Kumar", "Anil Singh", "Vikram Sharma"]
+    },
+    "officer_designation": {
+      "type": "string",
+      "examples": ["Tehsildar-Sadar", "Tehsildar", "Assistant Tehsildar", "Deputy Tehsildar"]
+    }
+  }
