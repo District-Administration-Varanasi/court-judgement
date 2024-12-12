@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from openai import OpenAI
+from flask_cors import CORS 
 from dotenv import load_dotenv
 import json
 import requests
@@ -10,14 +11,14 @@ load_dotenv()
 client = OpenAI()
 
 class AzureAdapter():
-    def _init_(self):
+    def __init__(self):
         self.subscription_key = os.environ.get("AZURE_SUBSCRIPTION_KEY")
 
     def translate_text(self, text,source_language, target_language):
 
         url = "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&from={}&to={}".format(source_language, target_language)
         headers = {
-            "Ocp-Apim-Subscription-Key": "38a3485f022e47fc845aca60612967eb",
+            "Ocp-Apim-Subscription-Key":AZURE_SUBSCRIPTION_KEY,
             'Ocp-Apim-Subscription-Region': "southeastasia",
             "Content-Type": "application/json; charset=UTF-8"
         }
@@ -201,7 +202,7 @@ def create_null_json(input_json_path):
 ################################################ ROUTES ##################################################
 
 app = Flask(__name__)
-
+CORS(app)
 @app.route("/generate_q", methods=['POST'])
 def generate_q():
 
